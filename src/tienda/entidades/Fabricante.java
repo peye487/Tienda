@@ -3,8 +3,8 @@ package tienda.entidades;
 
 public class Fabricante {
     
-    private int codigo;
-    private String nombre;
+        private int codigo;
+        private String nombre;
 
     public Fabricante() {
     }
