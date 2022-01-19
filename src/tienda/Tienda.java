@@ -25,6 +25,7 @@ public class Tienda {
         Producto p = prodServ.mostrarMasBarato();
 
         if (p != null) {
+            System.out.println("PRODUCTO MÁS BARATO DE LA LISTA");
             System.out.println(p);
         } else {
             System.out.println("NO se encontró ningun producto");
@@ -43,12 +44,17 @@ public class Tienda {
             }
          
             
-//            
-//            Collection <Producto> lista = prodServ.listarProductos();
-//           
-//            for (Producto prod : lista) {
-//                System.out.println(prod);
-                
+//       LISTAR ENTRE 120 y 202
+            System.out.println("Lista de productos entre $120 y $202 ");
+            System.out.println(prodServ.listarEntre());                     // LO PUEDO HACER ASI PERO ME MUESTRA TODO LOS PRODUCTOS EN LA MISMA LÍNEA
+            
+            System.out.println("=========================");
+            Collection <Producto> lista = prodServ.listarEntre();           //LO REALIZO ASÍ, GUARDANDO EL RESULTADO EN OTRO ARRAYLIST Y LO 
+                                                                            //IMPRIMO CON UN FOR EACH PARA QUE QUEDE MAS PROLIJO.
+            for (Producto prod : lista) {
+                System.out.println(prod);
+                System.out.println("===========================");
+            }   
             
 
             prodServ.imprimirProductos();

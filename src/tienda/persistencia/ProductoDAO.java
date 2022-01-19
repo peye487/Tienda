@@ -142,8 +142,8 @@ public final class ProductoDAO extends DAO {
     public Collection <Producto> listaPrecio () throws Exception{
         try {
             
-            String sql = "SELECT nombre, precio FROM producto" +
-                         "WHERE precio BETWEEN 120 AND 202";
+            String sql = "SELECT nombre, precio FROM producto "+
+                         "WHERE precio BETWEEN 120 AND 202;";
             
             consultarBase(sql);
             
@@ -162,7 +162,9 @@ public final class ProductoDAO extends DAO {
             return productos;
             
         } catch (Exception e) {
-            throw e;
+//            throw e;
+            System.out.println(e.getMessage());
+            return null;
         }    
     }
     
@@ -170,7 +172,7 @@ public final class ProductoDAO extends DAO {
     
         try {
             
-            String sql = "SELECTñ nombre,precio FROM producto ORDER BY precio ASC LIMIT 1";
+            String sql = "SELECT nombre,precio FROM producto ORDER BY precio ASC LIMIT 1;";
             consultarBase(sql);
             
             Producto producto = null;
@@ -185,7 +187,7 @@ public final class ProductoDAO extends DAO {
             return producto;
             
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+          System.out.println(e.getMessage());
           return null;
         }
     

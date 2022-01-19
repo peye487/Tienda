@@ -73,16 +73,11 @@ public class ProductoServicio {
         }  
     }
     
-    public Collection <Producto> listarEntre() throws Exception{
-    
-        try {
+    public Collection <Producto> listarEntre() throws Exception {
+           
             Collection<Producto>lista = dao.listaPrecio();
             return lista;
-            
-        } catch (Exception e) {
-            throw e;
-        }
-    
+              
     }
     
     public Producto mostrarMasBarato () {
